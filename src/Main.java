@@ -3,12 +3,19 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
         //testFor();
-        //testFor2();
+        System.out.println("Execute testFor2()");
+        testFor2();
+
 //        for(int c = 0; c <= 10000; c++) {
 //            //convertToBinary(c);
 //            printHex(c);
 //        }
 
+        System.out.println("Execute testPrintHex()");
+        testPrintHex();
+    }
+
+    private static void testPrintHex() {
         int intVal = 0;
         Scanner input = new Scanner(System.in);
 
@@ -16,7 +23,7 @@ public class Main {
             System.out.print("Enter number (-1 for exit): ");
             intVal = input.nextInt();
             if (intVal == -1){
-               break; 
+               break;
             }
             System.out.print("Число " + intVal + " в hex: 0x");
             printHex(intVal);
@@ -126,7 +133,7 @@ public class Main {
         System.out.println("rc = " + rc);
     }
 
-    private static void convertToBinary(int numberToConvert) {
+    private static void printBin(int numberToConvert) {
         //берем число и начинаем его делить на 2
 
         System.out.printf("%d = ", numberToConvert);
