@@ -4,11 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
         //testFor();
-        System.out.println("Execute testFor2()");
+        System.out.println("---- Execute testFor2() -----");
         testFor2();
 
-        System.out.println("Execute testPrintHex()");
+        System.out.println("---- Execute testPrintHex() ----");
         testPrintHex();
+
+        System.out.println("---- Execute testPrintBin() ----");
+        testPrintBin();
     }
 
     public static void testPrintHex() {
@@ -25,6 +28,24 @@ public class Main {
             }
             System.out.print("Число " + intVal + " в hex: 0x");
             print.asHex(intVal);
+            System.out.println();
+        }
+    }
+
+    public static void testPrintBin() {
+        PrintValue print = new PrintValue();
+        int iVal = 0;
+        /*Constructs a new Scanner that produces values scanned from the specified input stream.
+        Bytes from the stream are converted into characters using the underlying platform's default charset. */
+        Scanner in = new Scanner(System.in);
+        while (true){
+            System.out.print("Enter number (-1 for exit): ");
+            iVal = in.nextInt();
+            if (iVal == -1){
+                break;
+            }
+            System.out.print("Число " + iVal + " в двоичной системе: ");
+            print.asBin(iVal);
             System.out.println();
         }
     }
@@ -57,47 +78,5 @@ public class Main {
         }
 
         System.out.println("rc = " + rc);
-    }
-
-    private static void printBin(int numberToConvert) {
-        //берем число и начинаем его делить на 2
-
-        System.out.printf("%d = ", numberToConvert);
-
-        if (numberToConvert == 0) {
-            System.out.print("0");
-            System.out.println("\n----------------");
-            return;
-        }
-
-        Vector<Integer> vec = new Vector<>();
-
-//        for (;numberToConvert > 0;) {
-//            vec.add(numberToConvert % 2);
-//            numberToConvert /= 2;
-//        }
-
-        while (numberToConvert > 0) {
-            vec.add(numberToConvert % 2);
-            numberToConvert /= 2;
-        }
-
-//        Collections.reverse(vec);
-
-        int size = vec.size();
-        ListIterator fwd = vec.listIterator();
-        ListIterator rev = vec.listIterator(size);
-        for (int i = 0, mid = size >> 1; i < mid; i++) {
-            Object tmp = fwd.next();
-            fwd.set(rev.previous());
-            rev.set(tmp);
-        }
-
-        for (Integer i : vec) {
-            System.out.print(i);
-        }
-
-        System.out.println("\n----------------");
-
     }
 }
