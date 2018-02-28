@@ -115,4 +115,7 @@ public class PrintValue {
         System.out.println("\n----------------");
 
     }
+    public void logicalAnd() {
+
+    }
 }

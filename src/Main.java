@@ -12,6 +12,9 @@ public class Main {
 
         System.out.println("---- Execute testPrintBin() ----");
         testPrintBin();
+
+        System.out.println("---- Execute testBinaryOperations ----");
+        testBinaryOperations();
     }
 
     public static void testPrintHex() {
@@ -78,5 +81,9 @@ public class Main {
         }
 
         System.out.println("rc = " + rc);
+    }
+
+    void testBinaryOperations() {
+
     }
 }
