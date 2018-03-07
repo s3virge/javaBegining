@@ -13,6 +13,9 @@ public class Main {
         System.out.println("---- Execute testFor() -----");
         testFor();
 
+        System.out.println("---- Execute testFor2() -----");
+        testFor2();
+
         System.out.println("---- Execute arrayLength() -----");
         arrayLength();
 
@@ -103,6 +106,16 @@ public class Main {
         //rc=3
         System.out.println("rc = " + rc);
     }
+
+    private static void testFor2() {
+        int c = 0;
+
+        for (; c <= 5;) {
+            System.out.println("c = " + c);
+            c++;
+        }
+    }
+
 
     private static void testBinaryOperations() {
 
