@@ -2,10 +2,19 @@ import java.util.*;
 
 public class Main {
 
+    private static String[] appArgs; //
+
     public static void main(String[] args) {
-        //testFor();
-        System.out.println("---- Execute testFor2() -----");
-        testFor2();
+        appArgs = args;
+        launch();
+    }
+
+    public static void launch() {
+        System.out.println("---- Execute testFor() -----");
+        testFor();
+
+        System.out.println("---- Execute arrayLength() -----");
+        arrayLength();
 
         System.out.println("---- Execute testPrintHex() ----");
         testPrintHex();
@@ -15,6 +24,17 @@ public class Main {
 
         System.out.println("---- Execute testBinaryOperations ----");
         testBinaryOperations();
+
+        System.out.println("---- Execute launchFromConsole ----");
+        launchFromConsole();
+
+        System.out.println("---- Execute testAppArgs ----");
+        testAppArgs();
+    }
+
+    private static void testAppArgs() {
+        ArgumentExample argExample = new ArgumentExample();
+        argExample.showProgrammArguments(appArgs);
     }
 
     public static void testPrintHex() {
@@ -53,7 +73,7 @@ public class Main {
         }
     }
 
-    private static void testFor() {
+    private static void arrayLength() {
         int[] i = {1, 2, 3, 4, 5, 6, 7};
 
         //length возвращает колличество элементов в массиве
@@ -65,7 +85,7 @@ public class Main {
         }
     }
 
-    private static void testFor2() {
+    private static void testFor() {
         int[] i = {0, 1, 2, 3, 4, 5, 6};
 
         int rc = 0;
@@ -80,10 +100,21 @@ public class Main {
                 break;
         }
 
+        //rc=3
         System.out.println("rc = " + rc);
     }
 
-    void testBinaryOperations() {
+    private static void testBinaryOperations() {
 
     }
+
+    //запуск из консоли
+    public static void launchFromConsole() {
+        System.out.println("first we ned to compile java file. For example: javac Welcome.java");
+        System.out.println("and then we ned to launch compiled file. For example: java Welcome");
+    }
+
+    //todo запуск jar с зависимостями из командной стрики
+    //todo classpath
+    //todo interface и полиморфизм
 }

@@ -74,6 +74,7 @@ public class PrintValue {
             }
         }
     }
+
     public void asBin(int numberToConvert) {
         //берем число и начинаем его делить на 2
 
@@ -115,6 +116,7 @@ public class PrintValue {
         System.out.println("\n----------------");
 
     }
+
     public void logicalAnd() {
 
     }
