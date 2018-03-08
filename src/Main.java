@@ -10,7 +10,7 @@ public class Main {
     }
 
     public static void launch() {
-        System.out.println("---- Execute testFor() -----");
+        /*System.out.println("---- Execute testFor() -----");
         testFor();
 
         System.out.println("---- Execute testFor2() -----");
@@ -23,16 +23,16 @@ public class Main {
         testPrintHex();
 
         System.out.println("---- Execute testPrintBin() ----");
-        testPrintBin();
+        testPrintBin();*/
 
         System.out.println("---- Execute testBinaryOperations ----");
         testBinaryOperations();
-
+/*
         System.out.println("---- Execute launchFromConsole ----");
         launchFromConsole();
 
         System.out.println("---- Execute testAppArgs ----");
-        testAppArgs();
+        testAppArgs();*/
     }
 
     private static void testAppArgs() {
@@ -116,9 +116,22 @@ public class Main {
         }
     }
 
-
     private static void testBinaryOperations() {
+        boolean t = true, f = false;
 
+        if (t ^ f) {
+            System.out.println("t = " + t);
+            System.out.println("f = " + f);
+        }
+        else if (t & f) {
+            System.out.println("(t & f) == true");
+        }
+        else if (f & t) {
+            System.out.println("(f & t) == true");
+        }
+        else if (t | f) {
+            System.out.println("()");
+        }
     }
 
     //запуск из консоли
