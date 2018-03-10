@@ -143,4 +143,5 @@ public class Main {
     //todo запуск jar с зависимостями из командной стрики
     //todo classpath
     //todo interface и полиморфизм
+    //todo сложение, вычитание множеств
 }
