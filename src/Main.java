@@ -117,21 +117,53 @@ public class Main {
     }
 
     private static void testBinaryOperations() {
-        boolean t = true, f = false;
+        System.out.println("Побитовые операции в Java можно проводить только над целочисленными типами данных." +
+                "\n То есть long, int, short, char, byte." +
+                "\nРазница в работе с целочисленными значениями только в том сколько они хранят в себе диапазон допустимых значений.");
 
-        if (t ^ f) {
-            System.out.println("t = " + t);
-            System.out.println("f = " + f);
+        System.out.println("\nПример работы с типом byte");
+        byte a = 47;
+        byte b = (byte) ~a;
+        System.out.println(b);
+        System.out.println("Представление числа: " + a + " в двоичной системе исчисления: " + Integer.toBinaryString(a));
+        System.out.println("Представление числа:" + b + " в двоичной системе исчисления: " + Integer.toBinaryString(b) + "\n");
+
+        System.out.println("Пример работы с типом short");
+        short c = 350;
+        short d = (short) ~c;
+        System.out.println(d);
+        System.out.println("Представление числа: " + c + " в двоичной системе исчисления: " + Integer.toBinaryString(c));
+        System.out.println("Представление числа:" + d + " в двоичной системе исчисления: " + Integer.toBinaryString(d) + "\n");
+
+        System.out.println("Пример работы с типом int");
+        int e = 555555555;
+        int f = ~e;
+        System.out.println(f);
+        System.out.println("Представление числа: " + e + " в двоичной системе исчисления: " + Integer.toBinaryString(e));
+        System.out.println("Представление числа:" + f + " в двоичной системе исчисления: " + Integer.toBinaryString(f) + "\n");
+
+        System.out.println("Пример работы с типом long");
+        long g = 111112222233333L;
+        long h = ~g;
+        System.out.println(h);
+        System.out.println("Представление числа: " + g + " в двоичной системе исчисления: " + Long.toBinaryString(g));
+        System.out.println("Представление числа:" + h + " в двоичной системе исчисления: " + Long.toBinaryString(h) + "\n");
+
+        boolean bt = false, bf = true;
+
+        if (bt & bf) {
+            System.out.println("(bt & bf) == true");
         }
-        else if (t & f) {
-            System.out.println("(t & f) == true");
+        else if (bf ^ bt) {
+            System.out.println("(bf ^ bt) == true");
         }
-        else if (f & t) {
-            System.out.println("(f & t) == true");
+        else if (bf ^ bf) {
+            System.out.println("(bf ^ bf) == true");
         }
-        else if (t | f) {
-            System.out.println("()");
+        else if (bt | bf) {
+            System.out.println("(t | f)");
         }
+
     }
 
     //запуск из консоли
