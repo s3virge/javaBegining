@@ -122,20 +122,27 @@ public class Main {
         op.example();
 
         op.NOT();
-        /////////////////////////////////////////////
-        boolean bt = false, bf = true;
+        op.AND();
+        op.OR();
+        op.XOR();
 
-        if (bt & bf) {
-            System.out.println("(bt & bf) == true");
+        /////////////////////////////////////////////
+        boolean t = false, f = true;
+
+        //1(правда) выйдет только тогда когда обе части правда (1 & 1 → 1).
+        if (t & f) {
+            System.out.println("обе части правда (1 & 1 → 1)");
         }
-        else if (bf ^ bt) {
-            System.out.println("(bf ^ bt) == true");
+        //обе части должны отличаться друг от друга (0 ^ 1 → 1) но (1 ^ 1 → 0).
+        else if (f ^ t) {
+            System.out.println("((0 ^ 1 → 1)");
         }
-        else if (bf ^ bf) {
-            System.out.println("(bf ^ bf) == true");
+        else if (f ^ f) {
+            System.out.println("((1 ^ 0 → 1)");
         }
-        else if (bt | bf) {
-            System.out.println("(t | f)");
+        //если хоть одна часть правда, тогда все правда (0 | 1 → 1)
+        else if (t | f) {
+            System.out.println("(0 | 1 → 1)");
         }
 
     }
