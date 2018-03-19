@@ -119,12 +119,17 @@ public class Main {
     private static void testBinaryOperations() {
         BitOperator op = new BitOperator();
 
-        op.example();
+        //op.example();
 
+        System.out.println("------------------");
         op.NOT();
+        System.out.println("------------------");
         op.AND();
+        System.out.println("------------------");
         op.OR();
+        System.out.println("------------------");
         op.XOR();
+        System.out.println("------------------");
 
         /////////////////////////////////////////////
         boolean t = false, f = true;
@@ -134,11 +139,14 @@ public class Main {
             System.out.println("обе части правда (1 & 1 → 1)");
         }
         //обе части должны отличаться друг от друга (0 ^ 1 → 1) но (1 ^ 1 → 0).
-        else if (f ^ t) {
-            System.out.println("((0 ^ 1 → 1)");
+        else if (t ^ t) {
+            System.out.println("((1 ^ 1 → 0)");
         }
         else if (f ^ f) {
-            System.out.println("((1 ^ 0 → 1)");
+            System.out.println("((0 ^ 0 → 0)");
+        }
+        else if (t ^ f) {
+            System.out.println("1 ^ 0 -> 1");
         }
         //если хоть одна часть правда, тогда все правда (0 | 1 → 1)
         else if (t | f) {

@@ -36,7 +36,7 @@ public class BitOperator {
 
     void NOT() {
         System.out.println("~ Побитовый унарный оператор NOT\n" +
-                "~101010 => 010101\n");
+                "~101010 => 010101");
 
         System.out.println("Пример работы с типом byte");
         byte a = 47;
@@ -68,7 +68,7 @@ public class BitOperator {
     }
 
     void AND() {
-        System.out.println("~ Побитовый унарный оператор AND\n");
+        System.out.println("Побитовый оператор AND");
         System.out.println(" 1(правда) выйдет только тогда когда обе части правда (1 & 1 → 1).\n");
 
         int a = 7;
@@ -81,6 +81,7 @@ public class BitOperator {
     }
 
     void OR() {
+        System.out.println("Побитовый оператор OR");
         System.out.println("если хоть одна часть правда, тогда все правда (0 | 1 → 1).");
 
         int a = 7;
@@ -93,7 +94,15 @@ public class BitOperator {
     }
 
     void XOR() {
+        System.out.println("Побитовый оператор XOR");
         System.out.println("обе части должны отличаться друг от друга (0 ^ 1 → 1) но (1 ^ 1 → 0).");
+
+        System.out.println("(1 ^ 0 -> 1)");
+        System.out.println("(0 ^ 1 -> 1)");
+        System.out.println("(1 ^ 1 -> 0)");
+        System.out.println("(0 ^ 0 -> 0)");
+
+        System.out.println("Если обе части отличуются, то true");
 
         int a = 7;
         int b = 5;
