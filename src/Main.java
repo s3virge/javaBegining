@@ -27,6 +27,9 @@ public class Main {
 
         System.out.println("---- Execute testBinaryOperations ----");
         testBinaryOperations();
+
+        System.out.println("---- Execute testLogicalOperations ----");
+        testLogicalOperations();
 /*
         System.out.println("---- Execute launchFromConsole ----");
         launchFromConsole();
@@ -131,28 +134,36 @@ public class Main {
         op.XOR();
         System.out.println("------------------");
 
+    }
+
+    private static void testLogicalOperations() {
         /////////////////////////////////////////////
         boolean t = false, f = true;
 
         //1(правда) выйдет только тогда когда обе части правда (1 & 1 → 1).
         if (t & f) {
-            System.out.println("обе части правда (1 & 1 → 1)");
+            System.out.println("true & false → false");
+        }
+        if (t & t) {
+            System.out.println("true & true → true");
         }
         //обе части должны отличаться друг от друга (0 ^ 1 → 1) но (1 ^ 1 → 0).
-        else if (t ^ t) {
-            System.out.println("((1 ^ 1 → 0)");
+        if (t ^ t) {
+            System.out.println("true ^ true → false");
         }
-        else if (f ^ f) {
-            System.out.println("((0 ^ 0 → 0)");
+        if (f ^ f) {
+            System.out.println("false ^ false → false");
         }
-        else if (t ^ f) {
-            System.out.println("1 ^ 0 -> 1");
+        if (t ^ f) {
+            System.out.println("true ^ false → true");
+        }
+        if (f ^ t) {
+            System.out.println("false ^ true -> true");
         }
         //если хоть одна часть правда, тогда все правда (0 | 1 → 1)
-        else if (t | f) {
-            System.out.println("(0 | 1 → 1)");
+        if (t | f) {
+            System.out.println("true | false → true");
         }
-
     }
 
     //запуск из консоли
