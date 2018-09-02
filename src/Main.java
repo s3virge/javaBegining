@@ -10,13 +10,13 @@ public class Main {
     }
 
     public static void launch() {
-        /*System.out.println("---- Execute testFor() -----");
+        System.out.println("---- Execute testFor() -----");
         testFor();
 
         System.out.println("---- Execute testFor2() -----");
         testFor2();
 
-        System.out.println("---- Execute arrayLength() -----");
+        /*System.out.println("---- Execute arrayLength() -----");
         arrayLength();
 
         System.out.println("---- Execute testPrintHex() ----");
@@ -82,7 +82,7 @@ public class Main {
     private static void arrayLength() {
         int[] i = {1, 2, 3, 4, 5, 6, 7};
 
-        //length возвращает колличество элементов в массиве
+        //свойство length содержит колличество элементов в массиве
         //i.length = 7;
         System.out.printf("элементов в массиве = %d\n", i.length);
 
@@ -117,6 +117,9 @@ public class Main {
             System.out.println("c = " + c);
             c++;
         }
+
+        //c = 5
+        System.out.println("c = " + c);
     }
 
     private static void testBinaryOperations() {
@@ -172,7 +175,7 @@ public class Main {
         System.out.println("and then we ned to launch compiled file. For example: java Welcome");
     }
 
-    //todo запуск jar с зависимостями из командной стрики
+    //todo запуск jar с зависимостями из командной строки
     //todo classpath
     //todo interface и полиморфизм
     //todo сложение, вычитание множеств
