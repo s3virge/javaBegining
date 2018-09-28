@@ -30,17 +30,17 @@ public class Main {
 
         System.out.println("---- Execute testLogicalOperations ----");
         testLogicalOperations();
-/*
+
         System.out.println("---- Execute launchFromConsole ----");
         launchFromConsole();
 
         System.out.println("---- Execute testAppArgs ----");
-        testAppArgs();*/
+        testAppArgs();
     }
 
     private static void testAppArgs() {
         ArgumentExample argExample = new ArgumentExample();
-        argExample.showProgrammArguments(appArgs);
+        argExample.showArguments(appArgs);
     }
 
     public static void testPrintHex() {

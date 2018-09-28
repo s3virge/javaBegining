@@ -30,6 +30,7 @@ public class PrintValue {
         int size = vec.size();
         ListIterator fwd = vec.listIterator();
         ListIterator rev = vec.listIterator(size);
+
         for (int i = 0, mid = size >> 1; i < mid; i++) {
             Object tmp = fwd.next();
             fwd.set(rev.previous());
@@ -103,6 +104,7 @@ public class PrintValue {
         int size = vec.size();
         ListIterator fwd = vec.listIterator();
         ListIterator rev = vec.listIterator(size);
+
         for (int i = 0, mid = size >> 1; i < mid; i++) {
             Object tmp = fwd.next();
             fwd.set(rev.previous());
