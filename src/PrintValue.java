@@ -30,6 +30,7 @@ public class PrintValue {
         int size = vec.size();
         ListIterator fwd = vec.listIterator();
         ListIterator rev = vec.listIterator(size);
+
         for (int i = 0, mid = size >> 1; i < mid; i++) {
             Object tmp = fwd.next();
             fwd.set(rev.previous());
@@ -74,6 +75,7 @@ public class PrintValue {
             }
         }
     }
+
     public void asBin(int numberToConvert) {
         //берем число и начинаем его делить на 2
 
@@ -102,6 +104,7 @@ public class PrintValue {
         int size = vec.size();
         ListIterator fwd = vec.listIterator();
         ListIterator rev = vec.listIterator(size);
+
         for (int i = 0, mid = size >> 1; i < mid; i++) {
             Object tmp = fwd.next();
             fwd.set(rev.previous());
@@ -113,9 +116,6 @@ public class PrintValue {
         }
 
         System.out.println("\n----------------");
-
-    }
-    public void logicalAnd() {
 
     }
 }

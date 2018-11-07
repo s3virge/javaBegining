@@ -83,7 +83,7 @@ public class Main {
         System.out.println("rc = " + rc);
     }
 
-    private static void testBinaryOperations() {
+    void testBinaryOperations() {
 
     }
 }
