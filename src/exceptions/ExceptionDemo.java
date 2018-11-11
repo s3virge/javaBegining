@@ -5,10 +5,13 @@ public class ExceptionDemo {
 
         try {
             compute(6);
-            compute(11);
+//            compute(11);
+            getException();
         }
-        catch (MyException mEx) {
-            System.out.println("Catch exception " + mEx);
+        catch (MyException | SimpleException mEx) {
+            System.err.println("Catch exception ");
+            System.err.println(mEx); //here calls toString method
+            mEx.printStackTrace();
         }
     }
 
@@ -19,6 +22,11 @@ public class ExceptionDemo {
             throw new MyException(a);
         }
 
-        System.out.println("Normal finish");
+        System.out.println("compute method was finished normal");
+    }
+
+    static void getException() throws SimpleException {
+        System.out.println("getException() method was called.");
+        throw new SimpleException("Ёли-пали, что-то пошло не так");
     }
 }
