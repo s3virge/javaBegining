@@ -28,5 +28,8 @@ public class InterfaceDemo implements Alert {
         interfaceDemo.showMessage("Interface internal value = " + INTERNALVALUE);
 
         interfaceDemo.printMsg("Implements printMsg() from Message interface");
+        System.out.println("called interface static method. sqrt(9) = " + Alert.sqrt(9));
+
+//        Alert.INTERNALVALUE = 65876; //value is final
     }
 }

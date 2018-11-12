@@ -10,4 +10,8 @@ public interface Alert extends Message{
     default void alert(String alertText) {
         JOptionPane.showMessageDialog(null, alertText);
     }
+
+    static double sqrt(double var) {
+        return var * var;
+    }
 }
