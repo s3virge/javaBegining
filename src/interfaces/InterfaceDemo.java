@@ -2,7 +2,7 @@ package interfaces;
 
 import javax.swing.*;
 
-public class InterfaceDemo implements MyInterface {
+public class InterfaceDemo implements Alert {
     private static String MSG = "Hello from interface implementation";
 
     public void showMessage(String message) {
@@ -13,10 +13,9 @@ public class InterfaceDemo implements MyInterface {
         JOptionPane.showMessageDialog(null, MSG);
     }
 
-//    @Override
-//    public void allert(String allertText) {
-//        JOptionPane.showMessageDialog(null, allertText);
-//    }
+    public void printMsg(String msgText){
+        JOptionPane.showConfirmDialog(null, msgText, "printMsg method()", JOptionPane.YES_NO_CANCEL_OPTION);
+    }
 
     public static void main(String[] args) {
         InterfaceDemo interfaceDemo = new InterfaceDemo();
@@ -25,6 +24,9 @@ public class InterfaceDemo implements MyInterface {
 
         interfaceDemo.showMessage("Another message");
 
-        interfaceDemo.allert("default interface mathod");
+        interfaceDemo.alert("default interface mathod");
+        interfaceDemo.showMessage("Interface internal value = " + INTERNALVALUE);
+
+        interfaceDemo.printMsg("Implements printMsg() from Message interface");
     }
 }
