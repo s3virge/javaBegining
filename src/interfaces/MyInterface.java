@@ -2,7 +2,7 @@ package interfaces;
 
 import javax.swing.*;
 
-public interface MyInterface {
+interface MyInterface {
     void showMessage(String text);
 
     default void allert(String allertText) {
