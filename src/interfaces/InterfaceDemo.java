@@ -9,7 +9,7 @@ public class InterfaceDemo implements Alert {
         JOptionPane.showMessageDialog(null, message);
     }
 
-    public void showMessage() {
+    public void showMessagefromInterface() {
         JOptionPane.showMessageDialog(null, MSG);
     }
 
@@ -20,7 +20,7 @@ public class InterfaceDemo implements Alert {
     public static void main(String[] args) {
         InterfaceDemo interfaceDemo = new InterfaceDemo();
 
-        interfaceDemo.showMessage();
+        interfaceDemo.showMessagefromInterface();
 
         interfaceDemo.showMessage("Another message");
 
@@ -31,5 +31,6 @@ public class InterfaceDemo implements Alert {
         System.out.println("called interface static method. sqrt(9) = " + Alert.sqrt(9));
 
 //        Alert.INTERNALVALUE = 65876; //value is final
+        interfaceDemo.showInterfaceMessage();
     }
 }
