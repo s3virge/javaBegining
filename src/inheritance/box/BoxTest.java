@@ -1,5 +1,7 @@
 package inheritance.box;
 
+import inheritance.box.nextbox.NextBox;
+
 public class BoxTest {
 
     public static void main(String[] args) {
@@ -14,5 +16,8 @@ public class BoxTest {
         System.out.println("Volume of boxWeight1 = " + boxWeight1.volume());
         System.out.println("weight of boxWeight = " + boxWeight1.weight);
         System.out.println();
+
+        NextBox nb = new NextBox();
+        nb.printBoxValue();
     }
 }

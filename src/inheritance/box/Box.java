@@ -25,7 +25,7 @@ public class Box {
         width = height = depth = length;
     }
 
-    Box() {
+    protected Box() {
         width = -1;
         height = -1;
         depth = -1;
@@ -34,5 +34,11 @@ public class Box {
     //calculate and return volume
     double volume() {
         return width * height * depth;
+    }
+
+    protected void printValues() {
+        System.out.println(width);
+        System.out.println(height);
+        System.out.println(depth);
     }
 }

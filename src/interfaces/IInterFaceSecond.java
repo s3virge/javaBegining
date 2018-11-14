@@ -1,6 +1,6 @@
 package interfaces;
 
-public interface Message {
+public interface IInterFaceSecond {
     void printMsg(String msg);
 
     default void showInterfaceMessage() {

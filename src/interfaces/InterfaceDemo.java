@@ -2,7 +2,7 @@ package interfaces;
 
 import javax.swing.*;
 
-public class InterfaceDemo implements Alert {
+public class InterfaceDemo implements IInterfaceFirst {
     private static String MSG = "Hello from interface implementation";
 
     public void showMessage(String message) {
@@ -27,10 +27,10 @@ public class InterfaceDemo implements Alert {
         interfaceDemo.alert("default interface mathod");
         interfaceDemo.showMessage("Interface internal value = " + INTERNALVALUE);
 
-        interfaceDemo.printMsg("Implements printMsg() from Message interface");
-        System.out.println("called interface static method. sqrt(9) = " + Alert.sqrt(9));
+        interfaceDemo.printMsg("Implements printMsg() from IInterFaceSecond interface");
+        System.out.println("called interface static method. sqrt(9) = " + IInterfaceFirst.sqrt(9));
 
-//        Alert.INTERNALVALUE = 65876; //value is final
+//        IInterfaceFirst.INTERNALVALUE = 65876; //value is final
         interfaceDemo.showInterfaceMessage();
     }
 }
