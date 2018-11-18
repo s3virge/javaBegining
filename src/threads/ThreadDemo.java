@@ -1,7 +1,22 @@
 package threads;
 
+
 public class ThreadDemo {
     public static void main(String[] args) {
+
+        //создать объект
+        MyThread mt = new MyThread();
+        //создать поток на основе объекта
+        Thread th0 = new Thread(mt);
+        //запустить выполнение нового потока
+        th0.start();
+
+        try {
+            th0.join(); //просоедениться к главному потоку после завершиня
+        }
+        catch (Exception e) {
+            e.getMessage();
+        }
 
         NewThread th1 = new NewThread("First");
         NewThread th2 = new NewThread("Second");
@@ -21,7 +36,7 @@ public class ThreadDemo {
             th3.thread.join();
 
             System.out.println("---------------------------------\n" +
-                    " All threads are finished \n" +
+                    " All threads is finished \n" +
                     "-----------------------------------");
         }
         catch (InterruptedException e) {
