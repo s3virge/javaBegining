@@ -2,7 +2,7 @@ package interfaces;
 
 import javax.swing.*;
 
-public interface IInterfaceFirst extends IInterFaceSecond {
+public interface IFirst extends ISecond {
     int INTERNALVALUE = 6;
 
     void showMessage(String text);

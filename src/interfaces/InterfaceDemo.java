@@ -1,36 +1,28 @@
 package interfaces;
 
-import javax.swing.*;
+import static interfaces.IFirst.INTERNALVALUE;
 
-public class InterfaceDemo implements IInterfaceFirst {
+public class InterfaceDemo {
     private static String MSG = "Hello from interface implementation";
 
-    public void showMessage(String message) {
-        JOptionPane.showMessageDialog(null, message);
-    }
-
-    public void showMessagefromInterface() {
-        JOptionPane.showMessageDialog(null, MSG);
-    }
-
-    public void printMsg(String msgText){
-        JOptionPane.showConfirmDialog(null, msgText, "printMsg method()", JOptionPane.YES_NO_CANCEL_OPTION);
-    }
-
     public static void main(String[] args) {
-        InterfaceDemo interfaceDemo = new InterfaceDemo();
+        FirstrImpl first = new FirstrImpl();
+        SecondImpl second = new SecondImpl();
 
-        interfaceDemo.showMessagefromInterface();
+        second.defaultInterfaceMethod();
 
-        interfaceDemo.showMessage("Another message");
+        first.showMessage("Another message");
 
-        interfaceDemo.alert("default interface mathod");
-        interfaceDemo.showMessage("Interface internal value = " + INTERNALVALUE);
+        first.alert("default interface mathod");
+        first.showMessage("Interface internal value = " + INTERNALVALUE);
 
-        interfaceDemo.printMsg("Implements printMsg() from IInterFaceSecond interface");
-        System.out.println("called interface static method. sqrt(9) = " + IInterfaceFirst.sqrt(9));
+        second.printMsg("Implements printMsg() from ISecond interface");
+        System.out.println("called interface static method. sqrt(9) = " + IFirst.sqrt(9));
 
-//        IInterfaceFirst.INTERNALVALUE = 65876; //value is final
-        interfaceDemo.showInterfaceMessage();
+//        IFirst.INTERNALVALUE = 65876; //value is final
+
+        FirstrImpl f = new FirstrImpl();
+        f.printMsg("собщение из printMsg");
+        f.showMessage("message from showMessage");
     }
 }

@@ -1,9 +1,9 @@
 package interfaces;
 
-public interface IInterFaceSecond {
+public interface ISecond {
     void printMsg(String msg);
 
-    default void showInterfaceMessage() {
+    default void defaultInterfaceMethod() {
         System.out.println(getClass().getName() + " showMessagefromInterface()");
     }
 }
