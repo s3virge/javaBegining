@@ -1,9 +1,13 @@
 package threads;
 
 public class NewThread implements Runnable {
+    Thread thread;
+    String name;
 
-    NewThread() {
-        new Thread(this).start();
+    NewThread(String threadname) {
+        name = threadname;
+        thread = new Thread(this, name);
+        thread.start();
     }
 
     @Override
