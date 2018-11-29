@@ -22,8 +22,9 @@ public class Gen<TypeA, TypeB> {
         System.out.println("second value type is " + valueB.getClass().getTypeName());
     }
 
-    public static <TypeC extends Number> TypeC multiply(TypeC val, TypeC mult) {
-        return null;
+    public static <? extends Number> multiply(Gen<?, ?> t) {
+        Integer i1 = 23, i2 = 2;
+        System.out.println(i1 * i2);
     }
 
 }

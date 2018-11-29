@@ -13,5 +13,7 @@ public class GenDemo {
 
         System.out.println(genSecond.getValueA());
         System.out.println(genSecond.getValueB());
+
+        Gen.multiply(genSecond);
     }
 }
