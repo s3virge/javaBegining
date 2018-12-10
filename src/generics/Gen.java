@@ -18,13 +18,17 @@ public class Gen<TypeA, TypeB> {
     }
 
     public void printValuesTypes() {
-        System.out.println("first value type is " + valueA.getClass().getTypeName());
-        System.out.println("second value type is " + valueB.getClass().getTypeName());
+        System.out.println("first value type is " + valueA.getClass().getSimpleName());
+        System.out.println("second value type is " + valueB.getClass().getSimpleName());
     }
 
-    public static <? extends Number> multiply(Gen<?, ?> t) {
-        Integer i1 = 23, i2 = 2;
-        System.out.println(i1 * i2);
+    public static <E extends Number, T extends  Number> Double multiply(E val1, T val2) {
+        System.out.println("val1 = " + val1 + "[" + val1.getClass().getSimpleName() + "]," +
+                " val2 = " + val2 + "[" + val2.getClass().getSimpleName() + "]");
+        return val1.doubleValue() * val2.doubleValue();
     }
 
+    public static Double multiply(Gen<? extends Number,?  extends Number> obj) {
+        return obj.valueA.doubleValue() * obj.valueB.doubleValue();
+    }
 }
